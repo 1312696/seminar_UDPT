@@ -4,8 +4,10 @@ var DiemSo;
 var bangGiaTri = [];
 var ViTriXoay; 
 var viTriX, viTriY; 
+var Tocdo = 300;
+var Thua;
 var danhSachHinh = [
-    [ 1, 1, 1, 1 ],
+    [ 1, 1, 1, 1, 0, 0, 0, 0],
     [ 1, 1, 1, 0, 1 ],
     [ 1, 1, 1, 0, 0, 0, 1 ],
     [ 1, 1, 0, 0, 1, 1 ],
@@ -42,4 +44,28 @@ function TaoHinhMoi() {
             }
         }
     }
+}
+
+function vongLap(){
+
+}
+//khi diem cang cao thi goi ham de tang toc do roi cua cac khoi
+function tangTocDo(){
+    if(DiemSo){
+        Tocdo = Tocdo - ;
+    }
+}
+
+//kiem tra vi tri cua khoi co kha thi hay khong
+function kiemTra(X, Y, viTriMoi){
+
+}
+
+//tao moi tro choi
+function taoTroChoi() {
+    clearInterval(interval);
+    KhoiTao();
+    TaoHinhMoi();
+    Thua = false;
+    interval = setInterval( vongLap, Tocdo );
 }
