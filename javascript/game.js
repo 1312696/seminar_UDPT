@@ -70,6 +70,9 @@ function  luuGiaTri() {
         }
     }
 }
+function  xoay(ViTriXoay) {
+    
+}
 function  xoaHang() {
     
 }
