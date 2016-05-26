@@ -47,7 +47,26 @@ function TaoHinhMoi() {
 }
 
 function vongLap(){
-
+  if ( kiemTra( 0, 1 ) ) {
+        viTriY = viTriY+1;
+    }
+    // if the element settled
+    else {
+        luuGiaTri();
+        xoaHang();
+        if (checkLose == 1) {
+            taoTroChoi();
+            return false;
+        }
+        TaoHinhMoi();
+    }
+}
+//luu gia tri vao bang khi o gạch xuống đáy
+function  luuGiaTri() {
+    
+}
+function  xoaHang() {
+    
 }
 //khi diem cang cao thi goi ham de tang toc do roi cua cac khoi
 function tangTocDo(){
