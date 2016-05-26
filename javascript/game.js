@@ -45,9 +45,33 @@ function TaoHinhMoi() {
         }
     }
 }
-
+//Tăng tọa độ y cho ô gạch
 function vongLap(){
-
+  if ( kiemTra( 0, 1 ) ) {
+        viTriY = viTriY+1;
+    }
+    else {
+        luuGiaTri();
+        xoaHang();
+        if (checkLose == 1) {
+            taoTroChoi();
+            return false;
+        }
+        TaoHinhMoi();
+    }
+}
+//luu gia tri vao bang khi o gạch xuống đáy
+function  luuGiaTri() {
+    for ( var x = 0; x < 4; x++ ) {
+        for ( var y = 0; y < 4; y++ ) {
+            if ( ViTriXoay[ x ][ y ] != 0 ) {
+                bangGiaTri[ x + viTriY ][ y + viTriX ] = ViTriXoay[ x ][ y ];
+            }
+        }
+    }
+}
+function  xoaHang() {
+    
 }
 //khi diem cang cao thi goi ham de tang toc do roi cua cac khoi
 function tangTocDo(){
