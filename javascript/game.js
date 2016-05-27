@@ -100,6 +100,7 @@ function  xoaHang() {
                 }
             }
             DiemSo += 95+ Math.floor( Math.random()*5);
+            tangTocDo();
             ++y;
         }
     }
@@ -108,7 +109,8 @@ function  xoaHang() {
 
 //khi diem cang cao thi goi ham de tang toc do roi cua cac khoi
 function tangTocDo(){
-        Tocdo = 300 - (DiemSo / 300) * 10;
+        Tocdo = 300 - (DiemSo / 300) * 200;
+        setInterval( vongLap, Tocdo);
 }
 
 //xu ly su kiem phim

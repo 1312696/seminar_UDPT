@@ -100,6 +100,7 @@ function  xoaHang2() {
                 }
             }
             DiemSo2 += 95+ Math.floor( Math.random()*5);
+            tangTocDo2();
             ++y;
 
         }
