@@ -16,7 +16,7 @@ canvas {
 	height: 620px;
 	overflow: auto;
 	float:left;
-	margin-left: 100px;
+	margin-left: 165px;
 	text-align:right;
 	
 }
@@ -32,18 +32,15 @@ canvas {
 	width:25%;
 	height: 300px;
 	float:right;	
-	
 
-
-	
-	
 }
+
 #player2{
 	width:25%;
 	height: 620px;
 	float:right;	
 	text-align:right;
-	margin-right: 100px
+	margin-right: 165px
 }
 #wrapper{
 	width:100%;
