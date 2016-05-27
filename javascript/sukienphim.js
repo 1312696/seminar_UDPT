@@ -7,6 +7,6 @@ document.body.onkeydown = function( e ) {
     };
     if ( typeof phim[ e.keyCode ] != 'undefined' ) {
         bamPhim( phim[ e.keyCode ] );
-        render();
+        Ve();
     }
 };
