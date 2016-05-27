@@ -6,6 +6,7 @@ var ViTriXoay;
 var viTriX, viTriY; 
 var Tocdo = 300;
 var Thua;
+var interval;
 var danhSachHinh = [
     [ 1, 1, 1, 1, 0, 0, 0, 0],
     [ 1, 1, 1, 0, 1 ],
@@ -143,3 +144,4 @@ function taoTroChoi() {
     Thua = false;
     interval = setInterval( vongLap, Tocdo );
 }
+taoTroChoi();
