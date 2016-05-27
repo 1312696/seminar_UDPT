@@ -16,7 +16,7 @@ canvas {
 	height: 620px;
 	overflow: auto;
 	float:left;
-	margin-left: 165px;
+	margin-left: 166px;
 	text-align:right;
 	
 }
@@ -24,7 +24,7 @@ canvas {
 	width:25%;
 	height: 300px;
 	float:left;	
-	margin-top: 10;
+	
 	text-align:right;
 	
 }
@@ -40,7 +40,7 @@ canvas {
 	height: 620px;
 	float:right;	
 	text-align:right;
-	margin-right: 165px
+	margin-right: 166px
 }
 #wrapper{
 	width:100%;
