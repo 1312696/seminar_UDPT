@@ -111,6 +111,7 @@ function  xoaHang2() {
 //khi diem cang cao thi goi ham de tang toc do roi cua cac khoi
 function tangTocDo2(){
         Tocdo2 = 300 - (DiemSo2 / 300) * 10;
+        setInterval(vongLap2, Tocdo2);
 }
 
 //xu ly su kiem phim
