@@ -92,6 +92,33 @@ function tangTocDo(){
         Tocdo = 300 - (DiemSo / 300) * 10;
 }
 
+//xu ly su kiem phim
+function bamPhim( phim ) {
+    switch ( phim ) {
+        case 'trai':
+            if ( kiemTra( -1,0, null ) ) {
+                --viTriX;
+            }
+            break;
+        case 'phai':
+            if ( kiemTra( 1,0,null ) ) {
+                ++viTriX;
+            }
+            break;
+        case 'xuong':
+            if ( kiemTra( 0, 1, null ) ) {
+                ++viTriY;
+            }
+            break;
+        case 'xoay':
+            var khoixoay = xoay( ViTriXoay );
+            if ( kiemTra( 0, 0, khoixoay ) ) {
+                ViTriXoay = khoixoay;
+            }
+            break;
+    }
+}
+
 //kiem tra vi tri cua khoi co kha thi hay khong
 function kiemTra(X, Y, viTriMoi){
     X = viTriX + X;
