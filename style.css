@@ -1,29 +1,61 @@
+html { 
+  background: url(bg.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 canvas {
     display: block;
     margin: auto;
     border: 1px solid black;
-	background-color:#DDEEB7;
+	
 }
-#left {
+#player1{
 	width:25%;
 	height: 620px;
 	overflow: auto;
 	float:left;
+	margin-left: 166px;
 	text-align:right;
-	margin-right : 50px
+	
 }
-#main{
+#score1{
 	width:25%;
 	height: 300px;
 	float:left;	
+	
 	text-align:right;
+	
+}
+#score2{
+	width:25%;
+	height: 300px;
+	float:right;	
 
+}
+
+#player2{
+	width:25%;
+	height: 620px;
+	float:right;	
+	text-align:right;
+	margin-right: 166px
 }
 #wrapper{
 	width:100%;
 	position: relative;
 	margin:auto;
-	height:800px;
+	height:600px;
 
 }
-	
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}

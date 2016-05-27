@@ -1,22 +1,36 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Demo game</title>
-        <link rel='stylesheet' href='style.css' />
-    </head>
-    
-    <body>
-        <div id = "wrapper" >
-        	<div id = "left">
-        		<canvas width='300' height='600'></canvas>      
-                        
-            </div>            
-            <div id = "main">
-                <canvas width='300' height='200'></canvas>
-                   
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Demo game</title>
+            <link rel='stylesheet' href='style.css' />
+        </head>
+        
+        <body >
+            <br/>
+            <div id = "wrapper" >
+                <div id="player1">
+                <canvas width='300' height='600'></canvas>
+                </div>
+                <div id="score1">
+                <canvas width='270' height='150'></canvas>
+                </div>
+                <div id ="player2">
+            <canvas width='300' height='600'></canvas>
             </div>
-        </div>      
-        <script src='javascript/canvas.js'></script>
-        <script src='javascript/game.js'></script>
-    </body>
-</html>
+                
+                <div id="score2">
+                <canvas width='270' height='150'></canvas>
+                </div>
+            
+
+            
+
+            </div>    
+            <script src='javascript/canvas2.js'></script>
+            <script src='javascript/game2.js'></script>
+            <script src='javascript/canvas.js'></script>
+            <script src='javascript/game.js'></script>
+    		<script src='javascript/sukienphim.js'></script>
+            <center><input type="button" class="button"  name="button"  value='PLAY' onClick="taoTroChoi(),taoTroChoi2()" ></center>
+        </body>
+    </html>

@@ -6,6 +6,7 @@ var ViTriXoay;
 var viTriX, viTriY; 
 var Tocdo = 300;
 var Thua;
+var interval;
 var danhSachHinh = [
     [ 1, 1, 1, 1, 0, 0, 0, 0],
     [ 1, 1, 1, 0, 1 ],
@@ -16,7 +17,7 @@ var danhSachHinh = [
     [ 0, 1, 0, 0, 1, 1, 1 ]
 ];
 function KhoiTao() {
-	DiemSo = 0;
+    DiemSo = 0;
     for ( var x = 0; x < dongBang; x++ ) {
         bangGiaTri[x] = [];
         for ( var y = 0; y < cotBang; y++ ) {
@@ -25,16 +26,16 @@ function KhoiTao() {
     }
 }
 function TaoHinhMoi() {
-	viTriX = 4;
+    viTriX = 4;
     viTriY = 0;
-	ViTriXoay = [];
+    ViTriXoay = [];
     var id = Math.floor( Math.random() * danhSachHinh.length );
     var hinh = danhSachHinh[ id ];
     for ( var x = 0; x < 4; x++ )
-	{
+    {
         ViTriXoay[ x ] = [];
         for ( var y = 0; y < 4; y++ ) 
-		{
+        {
             var vt = 4 * x + y;
             if ( typeof hinh[ vt ] != 'undefined' && hinh[ vt ] ) {
                 ViTriXoay[ x ][ y ] = id + 1;
@@ -53,8 +54,9 @@ function vongLap(){
     else {
         luuGiaTri();
         xoaHang();
-        if (checkLose == 1) {
-            taoTroChoi();
+        if (Thua == 1) {
+            Thua2 = true;
+			clearInterval(interval2);		
             return false;
         }
         TaoHinhMoi();
@@ -71,18 +73,69 @@ function  luuGiaTri() {
     }
 }
 function  xoay(ViTriXoay) {
-    
+    var viTriMoi = [];
+    for ( var y = 0; y < 4; ++y ) {
+        viTriMoi[ y ] = [];
+        for ( var x = 0; x < 4; ++x ) {
+            viTriMoi[ y ][ x ] = ViTriXoay[ 3 - x ][ y ];
+        }
+    }
+
+    return viTriMoi;
 }
 function  xoaHang() {
-    
+    for ( var y = dongBang - 1; y >= 0; --y ) {
+        var dayDong = true;
+        for ( var x = 0; x < cotBang; ++x ) {
+            if ( bangGiaTri[ y ][ x ] == 0 ) {
+                dayDong = false;
+                break;
+            }
+        }
+        if ( dayDong ) {
+           
+            for ( var yy = y; yy > 0; --yy ) {
+                for ( var x = 0; x < cotBang; ++x ) {
+                    bangGiaTri[ yy ][ x ] = bangGiaTri[ yy - 1 ][ x ];
+                }
+            }
+            DiemSo += 95+ Math.floor( Math.random()*5);
+            ++y;
+        }
+    }
 }
-//khi diem cang cao thi goi ham de tang toc do roi cua cac khoi
-function vongLap(){
 
-}
+
 //khi diem cang cao thi goi ham de tang toc do roi cua cac khoi
 function tangTocDo(){
         Tocdo = 300 - (DiemSo / 300) * 10;
+}
+
+//xu ly su kiem phim
+function bamPhim( phim ) {
+    switch ( phim ) {
+        case 'trai1':
+            if ( kiemTra( -1,0, null ) ) {
+                --viTriX;
+            }
+            break;
+        case 'phai1':
+            if ( kiemTra( 1,0,null ) ) {
+                ++viTriX;
+            }
+            break;
+        case 'xuong1':
+            if ( kiemTra( 0, 1, null ) ) {
+                ++viTriY;
+            }
+            break;
+        case 'xoay1':
+            var khoixoay = xoay( ViTriXoay );
+            if ( kiemTra( 0, 0, khoixoay ) ) {
+                ViTriXoay = khoixoay;
+            }
+            break;
+    }
 }
 
 //kiem tra vi tri cua khoi co kha thi hay khong
@@ -95,14 +148,18 @@ function kiemTra(X, Y, viTriMoi){
 
     for ( var y = 0; y < 4; ++y ) {
         for ( var x = 0; x < 4; ++x ) {
-            if ( newCurrent[ y ][ x ] ) {
-                if ( typeof board[ y + Y ] == 'undefined'   // kiem tra cac Dk cua khoi co kha thi hay khong, khong ra ngoai khung hinh
-                  || typeof board[ y + Y ][ x + X ] == 'undefined'
-                  || board[ y + Y ][ x + X ]
+            if ( viTriMoi [ y ][ x ] ) {
+                if ( typeof bangGiaTri[ y + Y ] == 'undefined'   // kiem tra cac Dk cua khoi co kha thi hay khong, khong ra ngoai khung hinh
+                  || typeof bangGiaTri[ y + Y ][ x + X ] == 'undefined'
+                  || bangGiaTri[ y + Y ][ x + X ]
                   || x + X < 0
                   || y + Y >= dongBang
                   || x + X>= cotBang ) {
-                    if (Y == 1) Thua = true; // neu khoi dang o dong tren cung thi thua
+                    if (Y == 1) 
+					{
+						Thua = true; // neu khoi dang o dong tren cung thi thua
+						
+					}
                     return false;
                 }
             }
@@ -118,5 +175,5 @@ function taoTroChoi() {
     KhoiTao();
     TaoHinhMoi();
     Thua = false;
-    interval = setInterval( vongLap, Tocdo );
+    interval = setInterval( vongLap, Tocdo)
 }
