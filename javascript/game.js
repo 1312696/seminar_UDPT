@@ -71,22 +71,51 @@ function  luuGiaTri() {
     }
 }
 function  xoay(ViTriXoay) {
-    
+    var viTriMoi = [];
+    for ( var y = 0; y < 4; ++y ) {
+        viTriMoi[ y ] = [];
+        for ( var x = 0; x < 4; ++x ) {
+            viTriMoi[ y ][ x ] = ViTriXoay[ 3 - x ][ y ];
+        }
+    }
+
+    return viTriMoi;
 }
 function  xoaHang() {
     
 }
+
 //khi diem cang cao thi goi ham de tang toc do roi cua cac khoi
 function tangTocDo(){
-    if(DiemSo){
-        Tocdo = Tocdo - ;
-    }
+        Tocdo = 300 - (DiemSo / 300) * 10;
 }
 
 //kiem tra vi tri cua khoi co kha thi hay khong
 function kiemTra(X, Y, viTriMoi){
+    X = viTriX + X;
+    Y = viTriY + Y;
+    viTriMoi = viTriMoi || ViTriXoay; // khi xoay khoi co bi qua ngoai man hinh khong
 
+
+
+    for ( var y = 0; y < 4; ++y ) {
+        for ( var x = 0; x < 4; ++x ) {
+            if ( newCurrent[ y ][ x ] ) {
+                if ( typeof board[ y + Y ] == 'undefined'   // kiem tra cac Dk cua khoi co kha thi hay khong, khong ra ngoai khung hinh
+                  || typeof board[ y + Y ][ x + X ] == 'undefined'
+                  || board[ y + Y ][ x + X ]
+                  || x + X < 0
+                  || y + Y >= dongBang
+                  || x + X>= cotBang ) {
+                    if (Y == 1) Thua = true; // neu khoi dang o dong tren cung thi thua
+                    return false;
+                }
+            }
+        }
+    }
+    return true;
 }
+
 
 //tao moi tro choi
 function taoTroChoi() {
