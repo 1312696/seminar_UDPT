@@ -4,7 +4,7 @@
 Danh sách sinh viên: **1312653- Huỳnh Tấn Trực, 1312665-Nguyễn Quốc Tuấn
 					   1312676-Đinh Minh Tú , 1312696-Trần Quang Việt**
 
-URL: https://tetris-demo.herokuapp.com/
+URL: http://tetris-canvas.site88.net/game.html
 
 ## Chức năng
 
