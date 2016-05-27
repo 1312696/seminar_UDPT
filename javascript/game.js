@@ -71,7 +71,15 @@ function  luuGiaTri() {
     }
 }
 function  xoay(ViTriXoay) {
-    
+    var viTriMoi = [];
+    for ( var y = 0; y < 4; ++y ) {
+        viTriMoi[ y ] = [];
+        for ( var x = 0; x < 4; ++x ) {
+            viTriMoi[ y ][ x ] = ViTriXoay[ 3 - x ][ y ];
+        }
+    }
+
+    return viTriMoi;
 }
 function  xoaHang() {
     
