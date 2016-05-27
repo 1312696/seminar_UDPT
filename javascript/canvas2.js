@@ -12,12 +12,12 @@ function Ve1( x, y ) {
     ctx1.strokeRect( canh2 * x, canh2 * y, canh2 - 1 , canh2 - 1 );
 }
 function Ve2() {
-   //ctx2.clearRect( 0, 0, W, H );
- 	ctx3.font = '40pt Calibri';
+    ctx3.clearRect( 0, 0, chieuNgang2, chieuDoc2 );
+ 	ctx3.font = '30pt Calibri';
     ctx3.fillStyle = 'Black';
- 	ctx3.fillText("Your score", 10, 100);
+ 	ctx3.fillText("Player2 score", 10, 50);
 	ctx3.font = '23pt Calibri';
-    ctx3.fillText(DiemSo2, 50, 150);
+    ctx3.fillText(DiemSo2, 10, 100);
     ctx1.clearRect( 0, 0, chieuNgang2, chieuDoc2 );
     ctx1.strokeStyle = 'black';
     for ( var x = 0; x < cotBang2; ++x ) {
