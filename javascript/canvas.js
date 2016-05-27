@@ -4,6 +4,9 @@ var canvas = document.getElementsByTagName( 'canvas' )[ 0 ];
 var ctx = canvas.getContext( '2d' );
 var chieuNgang = 300, chieuDoc = 600;
 var canh = chieuNgang / 10;
+var danhSachMau = [
+    'cyan', 'orange', 'blue', 'yellow', 'red', 'green', 'purple'
+];
 function VeO( x, y ) {
     ctx.fillRect( canh * x, canh * y, canh - 1 , canh - 1 );
     ctx.strokeRect( canh * x, canh * y, canh - 1 , canh - 1 );
@@ -15,7 +18,7 @@ function Ve() {
  	ctx2.fillText("Your score", 10, 100);
 	ctx2.font = '23pt Calibri';
     ctx2.fillText(DiemSo, 50, 150);
-    ctx.clearRect( 0, 0, W, H );
+    ctx.clearRect( 0, 0, chieuNgang, chieuDoc );
     ctx.strokeStyle = 'black';
     for ( var x = 0; x < cotBang; ++x ) {
         for ( var y = 0; y < dongBang; ++y ) {
