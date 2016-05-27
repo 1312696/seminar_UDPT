@@ -13,27 +13,30 @@ Danh sách chức năng cài đặt:
 * [x] Viết hàm tạo Hình mới cho ô gạch
 * [x] Viết hàm tạo vòng lập để hiển thị ô gạch rơi xuống và lưu giá trị khi ô gạch chạm đáy
 * [x] Viết hàm Vẽ lên các thẻ canvas 
-* [ ] 
-* [ ] 
-* [ ] 
-* [ ]
+* [X] Viết hàm khai báo các phím trên bàn phím cần sử dụng
+* [x] Viết các hàm xử lí sự kiện sử dụng bàn phím
+* [x] Viết hàm xoay và di chuyển khối hình
+* [x] Viết hàm khi một dòng đầy, sẽ tự động xóa dòng đó.
 * [ ] 
 
 Danh sách chức năng **phụ**:
 
-* [ ] 
-
+* [x] Chế độ 2 người chơi
+* [x] Khi một người chơi bị thua sẽ dừng trò chơi lại
+* [x] Mỗi khi xóa được 1 dòng, tốc độ rơi của khối hình sẽ nhanh hơn.
+* [x] Để chơi lại người chơi có thể chọn nút play.
 
 Các chuẩn đầu ra cần thực hiện:
 * [ ] Git với Centralize Workflow
 * [ ] Git theo Feature Branch Workflow
 * [ ] Git theo Feature Branch Workflow có Pull Request
 * [x] Git theo Gitflow Workflow
+
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-![Video Walkthrough] (demo.gif)
+![Video Walkthrough](demo.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
