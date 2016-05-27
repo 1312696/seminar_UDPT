@@ -95,22 +95,22 @@ function tangTocDo(){
 //xu ly su kiem phim
 function bamPhim( phim ) {
     switch ( phim ) {
-        case 'trai':
+        case 'trai1':
             if ( kiemTra( -1,0, null ) ) {
                 --viTriX;
             }
             break;
-        case 'phai':
+        case 'phai1':
             if ( kiemTra( 1,0,null ) ) {
                 ++viTriX;
             }
             break;
-        case 'xuong':
+        case 'xuong1':
             if ( kiemTra( 0, 1, null ) ) {
                 ++viTriY;
             }
             break;
-        case 'xoay':
+        case 'xoay1':
             var khoixoay = xoay( ViTriXoay );
             if ( kiemTra( 0, 0, khoixoay ) ) {
                 ViTriXoay = khoixoay;
