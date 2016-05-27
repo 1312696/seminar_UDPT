@@ -55,7 +55,8 @@ function vongLap2(){
         luuGiaTri2();
         xoaHang2();
         if (Thua2 == 1) {
-            taoTroChoi2();
+            Thua = true;
+			clearInterval(interval);
             return false;
         }
         TaoHinhMoi2();
@@ -173,4 +174,3 @@ function taoTroChoi2() {
     Thua2 = false;
     interval2 = setInterval( vongLap2, Tocdo2)
 }
-taoTroChoi2()

@@ -55,7 +55,8 @@ function vongLap(){
         luuGiaTri();
         xoaHang();
         if (Thua == 1) {
-            taoTroChoi();
+            Thua2 = true;
+			clearInterval(interval2);		
             return false;
         }
         TaoHinhMoi();
@@ -154,7 +155,11 @@ function kiemTra(X, Y, viTriMoi){
                   || x + X < 0
                   || y + Y >= dongBang
                   || x + X>= cotBang ) {
-                    if (Y == 1) Thua = true; // neu khoi dang o dong tren cung thi thua
+                    if (Y == 1) 
+					{
+						Thua = true; // neu khoi dang o dong tren cung thi thua
+						
+					}
                     return false;
                 }
             }
@@ -172,4 +177,3 @@ function taoTroChoi() {
     Thua = false;
     interval = setInterval( vongLap, Tocdo)
 }
-taoTroChoi()
