@@ -76,10 +76,8 @@ function  xoay(ViTriXoay) {
 function  xoaHang() {
     
 }
-//khi diem cang cao thi goi ham de tang toc do roi cua cac khoi
-function vongLap(){
 
-}
+
 //khi diem cang cao thi goi ham de tang toc do roi cua cac khoi
 function tangTocDo(){
         Tocdo = 300 - (DiemSo / 300) * 10;
