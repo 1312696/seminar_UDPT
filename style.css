@@ -8,45 +8,44 @@ html {
 canvas {
     display: block;
     margin: auto;
-    border: 1px solid black;
+    border: 2px solid black;
 	
 }
 #player1{
-	width:25%;
-	height: 620px;
+	width: 305px;
+	height: 610px;
 	overflow: auto;
 	float:left;
-	margin-left: 166px;
+	margin-left: 150px;
+
 	text-align:right;
 	
 }
 #score1{
-	width:25%;
+	width: 305px;
 	height: 300px;
 	float:left;	
-	
+	margin-right: 50px;
 	text-align:right;
 	
 }
 #score2{
-	width:25%;
-	height: 300px;
+	width: 305px;
+	height: 155px;
 	float:right;	
 
 }
 
 #player2{
-	width:25%;
-	height: 620px;
+	width: 305px;
+	height: 605px;
 	float:right;	
 	text-align:right;
-	margin-right: 166px
+	margin-right: 150px
 }
 #wrapper{
-	width:100%;
-	position: relative;
-	margin:auto;
-	height:600px;
+	
+	
 
 }
 .button {
