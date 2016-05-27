@@ -83,7 +83,24 @@ function  xoay(ViTriXoay) {
     return viTriMoi;
 }
 function  xoaHang() {
-    
+    for ( var y = dongBang - 1; y >= 0; --y ) {
+        var dayDong = true;
+        for ( var x = 0; x < cotBang; ++x ) {
+            if ( bangGiaTri[ y ][ x ] == 0 ) {
+                dayDong = false;
+                break;
+            }
+        }
+        if ( dayDong ) {
+           
+            for ( var yy = y; yy > 0; --yy ) {
+                for ( var x = 0; x < cotBang; ++x ) {
+                    bangGiaTri[ x ][ yy ] = bangGiaTri[ x ][ yy - 1 ];
+                }
+            }
+            ++y;
+        }
+    }
 }
 
 
