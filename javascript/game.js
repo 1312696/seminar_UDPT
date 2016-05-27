@@ -17,7 +17,7 @@ var danhSachHinh = [
     [ 0, 1, 0, 0, 1, 1, 1 ]
 ];
 function KhoiTao() {
-	DiemSo = 0;
+    DiemSo = 0;
     for ( var x = 0; x < dongBang; x++ ) {
         bangGiaTri[x] = [];
         for ( var y = 0; y < cotBang; y++ ) {
@@ -26,16 +26,16 @@ function KhoiTao() {
     }
 }
 function TaoHinhMoi() {
-	viTriX = 4;
+    viTriX = 4;
     viTriY = 0;
-	ViTriXoay = [];
+    ViTriXoay = [];
     var id = Math.floor( Math.random() * danhSachHinh.length );
     var hinh = danhSachHinh[ id ];
     for ( var x = 0; x < 4; x++ )
-	{
+    {
         ViTriXoay[ x ] = [];
         for ( var y = 0; y < 4; y++ ) 
-		{
+        {
             var vt = 4 * x + y;
             if ( typeof hinh[ vt ] != 'undefined' && hinh[ vt ] ) {
                 ViTriXoay[ x ][ y ] = id + 1;
@@ -54,7 +54,7 @@ function vongLap(){
     else {
         luuGiaTri();
         xoaHang();
-        if (checkLose == 1) {
+        if (Thua == 1) {
             taoTroChoi();
             return false;
         }
@@ -83,24 +83,7 @@ function  xoay(ViTriXoay) {
     return viTriMoi;
 }
 function  xoaHang() {
-    for ( var y = dongBang - 1; y >= 0; --y ) {
-        var dongDay = true;
-        for ( var x = 0; x < cotBang; ++x ) {
-            if ( bangGiaTri[ y ][ x ] == 0 ) {
-                dongDay = false;
-                break;
-            }
-        }
-        if ( dongDay ) {
-            document.getElementById( 'clearsound' ).play();
-            for ( var yy = y; yy > 0; --yy ) {
-                for ( var x = 0; x < cotBang; ++x ) {
-                    bangGiaTri[ yy ][ x ] = bangGiaTri[ yy - 1 ][ x ];
-                }
-            }
-            ++y;
-        }
-    }
+    
 }
 
 
@@ -119,10 +102,10 @@ function kiemTra(X, Y, viTriMoi){
 
     for ( var y = 0; y < 4; ++y ) {
         for ( var x = 0; x < 4; ++x ) {
-            if ( newCurrent[ y ][ x ] ) {
-                if ( typeof board[ y + Y ] == 'undefined'   // kiem tra cac Dk cua khoi co kha thi hay khong, khong ra ngoai khung hinh
-                  || typeof board[ y + Y ][ x + X ] == 'undefined'
-                  || board[ y + Y ][ x + X ]
+            if ( viTriMoi [ y ][ x ] ) {
+                if ( typeof bangGiaTri[ y + Y ] == 'undefined'   // kiem tra cac Dk cua khoi co kha thi hay khong, khong ra ngoai khung hinh
+                  || typeof bangGiaTri[ y + Y ][ x + X ] == 'undefined'
+                  || bangGiaTri[ y + Y ][ x + X ]
                   || x + X < 0
                   || y + Y >= dongBang
                   || x + X>= cotBang ) {
@@ -142,6 +125,6 @@ function taoTroChoi() {
     KhoiTao();
     TaoHinhMoi();
     Thua = false;
-    interval = setInterval( vongLap, Tocdo );
+    interval = setInterval( vongLap, Tocdo)
 }
-taoTroChoi();
+taoTroChoi()
