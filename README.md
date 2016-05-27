@@ -24,6 +24,8 @@ Danh sách chức năng cài đặt:
 Danh sách chức năng **phụ**:
 
 * [x] Chế độ 2 người chơi
+* [x] Tính điểm số cho từng người chơi
+* [x] Điểm số của mỗi lần xóa dòng được random từ: 95-100
 * [x] Khi một người chơi bị thua sẽ dừng trò chơi lại
 * [x] Mỗi khi xóa được 1 dòng, tốc độ rơi của khối hình sẽ nhanh hơn.
 * [x] Để chơi lại người chơi có thể chọn nút play.
