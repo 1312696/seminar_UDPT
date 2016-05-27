@@ -98,7 +98,9 @@ function  xoaHang2() {
                     bangGiaTri2[ yy ][ x ] = bangGiaTri2[ yy - 1 ][ x ];
                 }
             }
+            DiemSo2 += 95+ Math.floor( Math.random()*5);
             ++y;
+
         }
     }
 }
