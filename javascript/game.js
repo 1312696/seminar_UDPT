@@ -95,7 +95,7 @@ function  xoaHang() {
            
             for ( var yy = y; yy > 0; --yy ) {
                 for ( var x = 0; x < cotBang; ++x ) {
-                    bangGiaTri[ x ][ yy ] = bangGiaTri[ x ][ yy - 1 ];
+                    bangGiaTri[ yy ][ x ] = bangGiaTri[ yy - 1 ][ x ];
                 }
             }
             ++y;
